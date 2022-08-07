@@ -11,16 +11,16 @@ function Names(){
             
     }
     const [names, setName] = useState([]);    
-    useEffect(() => {loadNames()});
-    
-    let namesHtml = '';
-   
+    useEffect(() => {loadNames()});    
+    let namesHtml = '';   
     let pokeNames = {names};
-    
+    console.log(pokeNames);
     for (let i = 0; i < 500; i++) {
         
-        namesHtml+= '<option>'+pokeNames.names[i].name+'</option>';
-      }
+        if(pokeNames.names[i]){
+            namesHtml+= '<option>'+pokeNames.names[i].name+'</option>';
+        }        
+    }
     return parse(namesHtml);
 }
 

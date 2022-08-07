@@ -3,3 +3,4 @@
 @tailwind utilities;
 
 .Jfv_FieldError{color: red}
+.successMsg{color: green}
